@@ -9,9 +9,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.myapplication.Constants
 import com.example.myapplication.DetailsActivity
 import com.example.myapplication.databinding.FragmentHomeBinding
 import com.example.myapplication.ui.TracksAdapter
@@ -55,7 +58,7 @@ class HomeFragment : Fragment(), ArtistsClickListener {
         homeViewModel.artistsLiveData.observe(viewLifecycleOwner) {artists ->
             artistAdapter.setData(artists)
         }
-        val authToken = "Bearer BQCdQFhRHXdNBp_VzwaFlp0ZgzshBhwg28P6oOObO7LJ-uSSSjyJQfvZDdSwBgz4-BdyhMX5W8hJoj7Xa8PF7tp1dpQgSkPq6P30P3OxqfY7JvU67hY"
+        val authToken = Constants.TOKEN
         val albumIds = "2up3OPMp9Tb4dAKM2erWXQ"
         var trackIds = "2up3OPMp9Tb4dAKM2erWXQ"
         val artistIds = "0TnOYISbd1XYRBk9myaseg"

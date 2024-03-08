@@ -24,6 +24,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            buildConfigField("String", "TOKEN", "BQBofVIzHUkGOlRDMoPRicbrIp4PvbradIB1FWMYCuBBFsYZiUmLUiEvRfGjTAxX6gggbFSK0uOhG-BGbsrq17WS6CehyHR-C991eVDzvuiCGARc4qA")
         }
     }
     compileOptions {
@@ -35,7 +36,9 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
+
 }
 
 dependencies {

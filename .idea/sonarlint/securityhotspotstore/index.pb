@@ -39,3 +39,5 @@ p
 @app/src/main/java/com/example/myapplication/model/artistsData.kt,a\2\a20d7f37da8001276c78d96c8432f42a54fe5ecb
 {
 Kapp/src/main/java/com/example/myapplication/model/SeveralArtistsResponse.kt,7\9\79c7b7b49635a0b116451ff6585ec787bfbc4c90
+h
+8app/src/main/java/com/example/myapplication/Constants.kt,7\e\7e4d0b54b8202c7f30b0c70e65fe92b4c34a57d7

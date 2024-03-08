@@ -41,8 +41,7 @@ class DetailsActivity : AppCompatActivity() {
                 "https://api.spotify.com/v1/tracks/"
             }
             RetrofitClient.setBaseUrl(baseUrl)
-            val authToken =
-                "Bearer BQCdQFhRHXdNBp_VzwaFlp0ZgzshBhwg28P6oOObO7LJ-uSSSjyJQfvZDdSwBgz4-BdyhMX5W8hJoj7Xa8PF7tp1dpQgSkPq6P30P3OxqfY7JvU67hY"
+            val authToken = Constants.TOKEN
             var call: Call<Any>? = null
 
             id.let {
