@@ -1,8 +1,7 @@
 
-?kotlin:S6615+" Remove this useless initializer.(ζ‘–›8Γ¬΄ια1
-Gkotlin:S108p")Either remove or fill this block of code.(ε¥‡8Θ¬΄ια1
-8kotlin:S6531/"Remove this useless cast.(ώΈΔ8Κ¬΄ια1
-=kotlin:S65314"Remove this useless cast.(ΥΣΈ»ÿÿÿÿÿ8Κ¬΄ια1
-=kotlin:S65319"Remove this useless cast.(Γ¶βϋÿÿÿÿ8Κ¬΄ια1
-Mkotlin:S1481")Remove this unused "name" local variable.(ΆΙθϊÿÿÿÿ8Κ¬΄ια1
-vkotlin:S3776"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(¶Α»¬ώÿÿÿÿ8Ξ¬΄ια1
+?kotlin:S6615." Remove this useless initializer.(ζ‘–›8Γ¬΄ια1
+Gkotlin:S108s")Either remove or fill this block of code.(ε¥‡8Θ¬΄ια1
+8kotlin:S65312"Remove this useless cast.(ώΈΔ8Κ¬΄ια1
+=kotlin:S65317"Remove this useless cast.(ΥΣΈ»ÿÿÿÿÿ8Κ¬΄ια1
+=kotlin:S6531<"Remove this useless cast.(Γ¶βϋÿÿÿÿ8Κ¬΄ια1
+vkotlin:S3776"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(¶Α»¬ώÿÿÿÿ8Ξ¬΄ια1

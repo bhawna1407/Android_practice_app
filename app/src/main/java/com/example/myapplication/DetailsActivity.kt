@@ -25,9 +25,12 @@ class DetailsActivity : AppCompatActivity() {
         albumImageView = findViewById(R.id.albumImageView)
         albumNameTextView = findViewById(R.id.albumNameTextView)
         albumPopularityTextView = findViewById(R.id.albumPopularityTextView)
-        val name = intent.getStringExtra("name")
-        val id = intent.getStringExtra("id")
-        val type = intent.getStringExtra("type")
+        var id = intent.getStringExtra("id")
+        var type = intent.getStringExtra("type")
+        val artistId = intent.getStringExtra("artistId")
+        if(artistId!=null) id=artistId
+        val artistType = intent.getStringExtra("artistType")
+        if(artistType!=null) type = artistType
         if (id != null) {
             val baseUrl = if (type == "album") {
                 "https://api.spotify.com/v1/albums/"
@@ -39,7 +42,7 @@ class DetailsActivity : AppCompatActivity() {
             }
             RetrofitClient.setBaseUrl(baseUrl)
             val authToken =
-                "Bearer BQA2JPsXV21c5H88VsszBn-k1TQcDP5DEGZEl6a1aioDv2RbrfKpscBJgtIqf03Sn6LBnbNc-EG7F32HKDbFVzWdgIuQEFKTsGNrNG2LBY9blGk7Z1w"
+                "Bearer BQCdQFhRHXdNBp_VzwaFlp0ZgzshBhwg28P6oOObO7LJ-uSSSjyJQfvZDdSwBgz4-BdyhMX5W8hJoj7Xa8PF7tp1dpQgSkPq6P30P3OxqfY7JvU67hY"
             var call: Call<Any>? = null
 
             id.let {

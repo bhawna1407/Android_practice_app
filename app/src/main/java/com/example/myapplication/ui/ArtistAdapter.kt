@@ -54,6 +54,9 @@ class ArtistsAdapter(private val listener: ArtistsClickListener) : RecyclerView.
 
         fun bind(artist: SeveralArtist) {
             currentArtistId = artist.id
+            Glide.with(itemView)
+                .load(artist.images[0].url) // Use the URL of the album image
+                .into(itemView.findViewById<ImageView>(R.id.albumImageView))
         }
 
     }

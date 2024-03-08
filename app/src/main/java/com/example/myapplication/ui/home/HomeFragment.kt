@@ -55,7 +55,7 @@ class HomeFragment : Fragment(), ArtistsClickListener {
         homeViewModel.artistsLiveData.observe(viewLifecycleOwner) {artists ->
             artistAdapter.setData(artists)
         }
-        val authToken = "Bearer BQA2JPsXV21c5H88VsszBn-k1TQcDP5DEGZEl6a1aioDv2RbrfKpscBJgtIqf03Sn6LBnbNc-EG7F32HKDbFVzWdgIuQEFKTsGNrNG2LBY9blGk7Z1w"
+        val authToken = "Bearer BQCdQFhRHXdNBp_VzwaFlp0ZgzshBhwg28P6oOObO7LJ-uSSSjyJQfvZDdSwBgz4-BdyhMX5W8hJoj7Xa8PF7tp1dpQgSkPq6P30P3OxqfY7JvU67hY"
         val albumIds = "2up3OPMp9Tb4dAKM2erWXQ"
         var trackIds = "2up3OPMp9Tb4dAKM2erWXQ"
         val artistIds = "0TnOYISbd1XYRBk9myaseg"
@@ -77,8 +77,8 @@ class HomeFragment : Fragment(), ArtistsClickListener {
 
     override fun onArtistClicked(artistId: String ) {
         val intent = Intent(requireContext(), DetailsActivity::class.java)
-        intent.putExtra("id", id)
-        intent.putExtra("type", "artist")
+        intent.putExtra("artistId", artistId)
+        intent.putExtra("artistType", "artist")
         startActivity(intent)
     }
 }

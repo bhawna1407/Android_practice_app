@@ -51,7 +51,7 @@ class DashboardFragment : Fragment(), SearchAdapter.OnItemClickListener {
         binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 query?.let {
-                    val authToken = "Bearer BQDQFIjH83Qk0cTrF_Te6BuMC_3CHtc34741-SatUzPOzEehmU9eqGbAsdTWGTMjqWZCM6KCzoPTIup7YDTRGdO8RSW5mb45Ps9PSVxZwxRdEt_uJKc" // Replace with your access token
+                    val authToken = "Bearer BQCdQFhRHXdNBp_VzwaFlp0ZgzshBhwg28P6oOObO7LJ-uSSSjyJQfvZDdSwBgz4-BdyhMX5W8hJoj7Xa8PF7tp1dpQgSkPq6P30P3OxqfY7JvU67hY" // Replace with your access token
                     dashboardViewModel.searchSpotify(authToken, query)
                 }
                 return true
