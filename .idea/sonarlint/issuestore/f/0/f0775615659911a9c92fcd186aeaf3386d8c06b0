@@ -1,12 +1,9 @@
 
-Xkotlin:S1172^"9Use "_" instead of this unused lambda parameter "artist".(Ξ‘ψ8ΦΒΑλα1
-Bkotlin:S125!"Remove this commented out code.(ζ©ψ¤ώÿÿÿÿ8ό›Γλα1
-Bkotlin:S125H"Remove this commented out code.(…‰°Γψÿÿÿÿ8ΪΒΑλα1
-Gkotlin:S108a")Either remove or fill this block of code.(ε¥‡8ίΒΑλα1
-Gkotlin:S108u")Either remove or fill this block of code.(ε¥‡8τΑλα1
-Vkotlin:S1481 "2Remove this unused "albumResponse" local variable.(µ΅οΒώÿÿÿÿ8„Γλα1
-Qkotlin:S1481G"3Remove this unused "artistResponse" local variable.(ª†O8γΒΑλα1
+Xkotlin:S1172$"9Use "_" instead of this unused lambda parameter "artist".(Ξ‘ψ8ΦΒΑλα1
+Gkotlin:S108'")Either remove or fill this block of code.(ε¥‡8ίΒΑλα1
+Gkotlin:S108;")Either remove or fill this block of code.(ε¥‡8τΑλα1
+Gkotlin:S108N")Either remove or fill this block of code.(ε¥‡8»³Ψπα1
 >kotlin:S1128"Remove this unused import.(τ”ώϊÿÿÿÿ8εΒΑλα1
 >kotlin:S1128"Remove this unused import.(ΚÒΕ­ωÿÿÿÿ8εΒΑλα1
 >kotlin:S1128"Remove this unused import.(‘ά„ϊÿÿÿÿ8εΒΑλα1
-~kotlin:S1186f"ZAdd a nested comment explaining why this function is empty or complete the implementation.(ξγ¥²ÿÿÿÿÿ8κΒΑλα1
+~kotlin:S1186,"ZAdd a nested comment explaining why this function is empty or complete the implementation.(ξγ¥²ÿÿÿÿÿ8κΒΑλα1

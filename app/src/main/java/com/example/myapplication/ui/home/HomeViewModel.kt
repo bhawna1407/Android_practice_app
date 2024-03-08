@@ -24,64 +24,6 @@ class HomeViewModel : ViewModel() {
     val trackLiveData = MutableLiveData<List<Track>>()
     val artistsLiveData = MutableLiveData<List<SeveralArtist>>()
 
-    fun getAlbums(authToken: String, albumIds: String) {
-        RetrofitClient.instance.getAlbums(authToken, albumIds)
-            .enqueue(object : Callback<AlbumResponse> {
-                override fun onResponse(call: Call<AlbumResponse>, response: Response<AlbumResponse>) {
-                    if (response.isSuccessful) {
-                        val albumResponse = response.body()
-//                        val albums = albumResponse?.albums ?: emptyList()
-//                        albumsLiveData.postValue(albums)
-                    } else {
-                        // Handle unsuccessful response
-                    }
-                }
-
-                override fun onFailure(call: Call<AlbumResponse>, t: Throwable) {
-                    // Handle failure
-                }
-            })
-    }
-
-    fun getTracks(authToken: String, trackIds: String) {
-        RetrofitClient.instance.getTracks(authToken, trackIds)
-            .enqueue(object : Callback<TrackResponse> {
-                override fun onResponse(call: Call<TrackResponse>, response: Response<TrackResponse>) {
-                    if (response.isSuccessful) {
-                        val trackResponse = response.body()
-                        val tracks = trackResponse?.tracks ?: emptyList()
-                        trackLiveData.postValue(tracks)
-                    } else {
-                        // Handle unsuccessful response
-                    }
-                }
-
-                override fun onFailure(call: Call<TrackResponse>, t: Throwable) {
-                    // Handle failure
-                }
-            })
-    }
-
-
-    fun getArtists(authToken: String, artistIds: String) {
-        RetrofitClient.instance.getArtists(authToken, artistIds)
-            .enqueue(object : Callback<ArtistResponse> {
-                override fun onResponse(call: Call<ArtistResponse>, response: Response<ArtistResponse>) {
-                    if (response.isSuccessful) {
-                        val artistResponse = response.body()
-//                        val artists = artistResponse?.artists ?: emptyList()
-//                        artistsLiveData.postValue(artists)
-                    } else {
-                        // Handle unsuccessful response
-                    }
-                }
-
-                override fun onFailure(call: Call<ArtistResponse>, t: Throwable) {
-                    // Handle failure
-                }
-            })
-    }
-
     fun getSeveralArtists(authToken: String, artistIds: List<String>) {
         val idsString = artistIds.joinToString(separator = ",")
         val call = RetrofitClient.instance.getSeveralArtists(authToken, idsString)
@@ -119,6 +61,25 @@ class HomeViewModel : ViewModel() {
                 }
             }
             override fun onFailure(call: Call<AlbumResponse>, t: Throwable) {
+                TODO("Not yet implemented")
+            }
+        })
+    }
+
+    fun getSeveralTracks(authToken: String, trackIds: List<String>) {
+        val idsString = trackIds.joinToString(separator = ",")
+        val call = RetrofitClient.instance.getSeveralTracks(authToken, idsString)
+        call.enqueue(object : Callback<TrackResponse> {
+            override fun onResponse(call: Call<TrackResponse>, response: Response<TrackResponse>) {
+                if (response.isSuccessful) {
+                    val tracksResponse = response.body()
+                    val tracks = tracksResponse?.tracks ?: emptyList()
+                    trackLiveData.postValue(tracks)
+                } else {
+
+                }
+            }
+            override fun onFailure(call: Call<TrackResponse>, t: Throwable) {
                 TODO("Not yet implemented")
             }
         })

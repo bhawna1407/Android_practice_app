@@ -6,8 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.myapplication.R
 import com.example.myapplication.model.Album
-
-class AlbumsAdapter : RecyclerView.Adapter<AlbumsAdapter.ViewHolder>() {
+interface AlbumsClickListener {
+    fun onAlbumClicked(albumId: String)
+}
+class AlbumsAdapter(private val listener: AlbumsClickListener) : RecyclerView.Adapter<AlbumsAdapter.ViewHolder>() {
 
     private var albums: List<Album> = emptyList()
 
@@ -31,11 +33,24 @@ class AlbumsAdapter : RecyclerView.Adapter<AlbumsAdapter.ViewHolder>() {
         return albums.size
     }
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
+        private lateinit var currentAlbumId: String
+        init {
+            itemView.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View?) {
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                val albumId = albums[position].id
+                listener.onAlbumClicked(albumId)
+            }
+        }
         fun bind(album: Album) {
+            currentAlbumId = album.id
             Glide.with(itemView)
                 .load(album.images[0].url) // Use the URL of the album image
-                .into(itemView.findViewById<ImageView>(R.id.albumImageView))
+                .into(itemView.findViewById(R.id.albumImageView))
         }
     }
 }

@@ -1,5 +1,5 @@
 package com.example.myapplication
 
 object Constants {
-    const val TOKEN = "Bearer BQDXZkpL4OdWwGpBKe8aUUop7EFmBAa0j3lRG2EwoIIwQkxCr8h74u9styGf82uH42D03iE-UmxN4Hj2SpubaYhkUd2BetfhqCku79DGyvmd1C5vJVY"
+    const val TOKEN = "Bearer BQDRUDzjRglIuDWzPMzkt9P813mpp_Heff-xQ9D5IqCwV30dX1BYrGidfdVp4w9JNnJ6gATBOEMOViXY1FnC4otpYwWt2AAHgSnG9Ro3d1unHlIV96c"
 }

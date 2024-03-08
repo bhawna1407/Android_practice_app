@@ -27,10 +27,18 @@ class DetailsActivity : AppCompatActivity() {
         albumPopularityTextView = findViewById(R.id.albumPopularityTextView)
         var id = intent.getStringExtra("id")
         var type = intent.getStringExtra("type")
+        val trackId = intent.getStringExtra("trackId")
+        val trackType = intent.getStringExtra("trackType")
+        val albumId = intent.getStringExtra("albumId")
+        val albumType = intent.getStringExtra("albumType")
         val artistId = intent.getStringExtra("artistId")
         if(artistId!=null) id=artistId
+        if(albumId!=null) id=albumId
+        if(trackId!=null) id=trackId
         val artistType = intent.getStringExtra("artistType")
         if(artistType!=null) type = artistType
+        if(albumType!=null) type = albumType
+        if(trackType!=null) type = trackType
         if (id != null) {
             val baseUrl = if (type == "album") {
                 "https://api.spotify.com/v1/albums/"
@@ -92,10 +100,10 @@ class DetailsActivity : AppCompatActivity() {
                                 val track = responseBody as Track
                                 albumNameTextView.text = track.name
                                 albumPopularityTextView.text = ""
-                                val imageUrl = track.images[0].url
-                                Glide.with(this@DetailsActivity)
-                                    .load(imageUrl)
-                                    .into(albumImageView)
+                                    Glide.with(this@DetailsActivity)
+                                        .load("https://i.guim.co.uk/img/media/0a2bdc778140a020a6b83f1b28213ed57f76be1e/0_0_5000_3000/master/5000.jpg?width=480&dpr=1&s=none")
+                                        .into(albumImageView)
+
                             }
                         }
                     } else {

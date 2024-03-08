@@ -63,10 +63,16 @@ interface SpotifyApiService {
         @Query("ids") artistIds: String
     ): Call<ArtistResponse>
 
-    @GET("artists")
+    @GET("albums")
     fun getSeveralAlbums(
         @Header("Authorization") authToken: String,
         @Query("ids") artistIds: String
     ): Call<AlbumResponse>
+
+    @GET("tracks")
+    fun getSeveralTracks(
+        @Header("Authorization") authToken: String,
+        @Query("ids") artistIds: String
+    ): Call<TrackResponse>
 
 }
