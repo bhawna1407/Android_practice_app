@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ui.dashboard.DashboardFragment">
+
+    <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="407dp"
+            android:layout_height="729dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="2dp">
+
+        <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/myfont"
+                android:layout_height="wrap_content"
+                android:iconifiedByDefault="false"
+                android:queryHint="What do you want to listen to?" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        <!-- Add other views here if needed -->
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
